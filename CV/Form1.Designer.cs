@@ -54,6 +54,7 @@
             this.userControl31 = new CV.UserControl3();
             this.userControl41 = new CV.UserControl4();
             this.userControl51 = new CV.UserControl5();
+            this.loading1 = new CV.Loading();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -171,7 +172,7 @@
             // 
             // sidePanel
             // 
-            this.sidePanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.sidePanel.BackColor = System.Drawing.Color.Silver;
             this.sidePanel.Location = new System.Drawing.Point(0, 100);
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(14, 56);
@@ -369,42 +370,56 @@
             // userControl11
             // 
             this.userControl11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.userControl11.Location = new System.Drawing.Point(200, 107);
+            this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl11.Location = new System.Drawing.Point(193, 100);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(1054, 535);
+            this.userControl11.Size = new System.Drawing.Size(1062, 547);
             this.userControl11.TabIndex = 5;
             // 
             // userControl21
             // 
             this.userControl21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.userControl21.Location = new System.Drawing.Point(200, 106);
+            this.userControl21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl21.Location = new System.Drawing.Point(0, 0);
             this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(1043, 532);
+            this.userControl21.Size = new System.Drawing.Size(1255, 689);
             this.userControl21.TabIndex = 6;
             // 
             // userControl31
             // 
             this.userControl31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.userControl31.Location = new System.Drawing.Point(200, 109);
+            this.userControl31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl31.Location = new System.Drawing.Point(0, 0);
             this.userControl31.Name = "userControl31";
-            this.userControl31.Size = new System.Drawing.Size(1043, 529);
+            this.userControl31.Size = new System.Drawing.Size(1255, 689);
             this.userControl31.TabIndex = 7;
             // 
             // userControl41
             // 
             this.userControl41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.userControl41.Location = new System.Drawing.Point(201, 107);
+            this.userControl41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl41.Location = new System.Drawing.Point(0, 0);
             this.userControl41.Name = "userControl41";
-            this.userControl41.Size = new System.Drawing.Size(1042, 500);
+            this.userControl41.Size = new System.Drawing.Size(1255, 689);
             this.userControl41.TabIndex = 8;
             // 
             // userControl51
             // 
             this.userControl51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.userControl51.Location = new System.Drawing.Point(200, 106);
+            this.userControl51.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl51.Location = new System.Drawing.Point(0, 0);
             this.userControl51.Name = "userControl51";
-            this.userControl51.Size = new System.Drawing.Size(1042, 529);
+            this.userControl51.Size = new System.Drawing.Size(1255, 689);
             this.userControl51.TabIndex = 9;
+            // 
+            // loading1
+            // 
+            this.loading1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loading1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loading1.Location = new System.Drawing.Point(0, 0);
+            this.loading1.Name = "loading1";
+            this.loading1.Size = new System.Drawing.Size(1255, 689);
+            this.loading1.TabIndex = 10;
             // 
             // Form1
             // 
@@ -413,14 +428,15 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1255, 689);
-            this.Controls.Add(this.userControl51);
-            this.Controls.Add(this.userControl41);
-            this.Controls.Add(this.userControl31);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.userControl21);
+            this.Controls.Add(this.loading1);
+            this.Controls.Add(this.userControl51);
+            this.Controls.Add(this.userControl41);
+            this.Controls.Add(this.userControl31);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -466,6 +482,7 @@
         private UserControl3 userControl31;
         private UserControl4 userControl41;
         private UserControl5 userControl51;
+        private Loading loading1;
     }
 }
 

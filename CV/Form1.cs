@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,7 +20,8 @@ namespace CV
             InitializeComponent();
             sidePanel.Height = button1.Height;
             sidePanel.Top = button1.Top;
-            userControl11.BringToFront();
+            loading1.BringToFront();
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -35,9 +38,14 @@ namespace CV
         {
             if (e.Button == MouseButtons.Left)
             {
+                this.Opacity = 0.70;
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
+                              
             }
+            if (e.Button == MouseButtons.None) this.Opacity = 1;
+            
+
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -45,6 +53,7 @@ namespace CV
             lastPoint = new Point(e.X, e.Y);
         }
 
+       
         private void button1_Click(object sender, EventArgs e)
         {
             sidePanel.Height = button1.Height;
@@ -80,6 +89,6 @@ namespace CV
             userControl51.BringToFront();
         }
 
-      
+        
     }
 }
